@@ -8,7 +8,7 @@ Data structures are the concrete implementations of a specific abstract data typ
 describe an abstract data type which holds a list of values and can perform push, pop, and peek operations.  The Data Structure for 
 how the data is stored and how those functions perform are what turns it into a data structure.
 
-##Primitive Data Types
+## Primitive Data Types
 Primitive data types are the building blocks of larger data structures.  They consist of basic data types such as int, string, etc.
 
 ## Algorithm
