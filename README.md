@@ -27,7 +27,7 @@ Most common operations:
 * Remove an element 
 
 Array Time Complexity Table
-![Image]("https://github.com/masseydigital/csharp-algorithms-and-data-structures/blob/master/res/ArrayTimeComplexityTable.PNG")
+![Array Complexity](res/ArrayTimeComplexityTable.PNG)
 
 ## Algorithm Analysis
 To infer growth of running time depending on the input size as a plot.  Large number require the use of log-log plots.  Input sizes are on the x-axis and running time is on the y-axis. 99% of the time we do not care of smaller terms compared to the larger terms.  We can trim smaller terms due to the nature of large inputs weighting more heavily on larger terms, i.e. N^3 has a much larger impact than N as input size grows larger.
@@ -37,6 +37,7 @@ We care mainly about two major factors:
 * Frequency of execution of each statement in a given program : this has a larger impact on performance.
 
 Order of growth falls into the following from largest to smallest:
+
 |Type | Notation | Example |
 | ---- | -------- | -------------------------------------------------- |
 | Exponential | 2<sup>n</sup> | Time complexity of breaking a password|
