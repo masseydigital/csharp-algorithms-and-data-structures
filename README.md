@@ -27,7 +27,7 @@ Most common operations:
 * Remove an element 
 
 Array Time Complexity Table
-![Image]("https://github.com/masseydigital/csharp-algorithms-and-data-structures/res/ArrayTimeComplexityTable.PNG")
+![Image]("https://github.com/masseydigital/csharp-algorithms-and-data-structures/blob/master/res/ArrayTimeComplexityTable.PNG")
 
 ## Algorithm Analysis
 To infer growth of running time depending on the input size as a plot.  Large number require the use of log-log plots.  Input sizes are on the x-axis and running time is on the y-axis. 99% of the time we do not care of smaller terms compared to the larger terms.  We can trim smaller terms due to the nature of large inputs weighting more heavily on larger terms, i.e. N^3 has a much larger impact than N as input size grows larger.
@@ -37,15 +37,15 @@ We care mainly about two major factors:
 * Frequency of execution of each statement in a given program : this has a larger impact on performance.
 
 Order of growth falls into the following from largest to smallest:
-Type | Notation | Example
----- | -------- | -------
-Exponential | 2<sup>n</sup> | Time complexity of breaking a password
-Cubic | N<sup>3</sup> | Three nested loops
-Quadratic | N<sup>2</sup> | Two nested loops
-Linearithmic | N log N | Commonly seen with divide and conquer approaches
-Linear | N | Single loops
-Logarithmic | log N | Binary search trees
-Constant | 1 | Operations such as addition and subtraction
+|Type | Notation | Example |
+| ---- | -------- | -------------------------------------------------- |
+| Exponential | 2<sup>n</sup> | Time complexity of breaking a password|
+| Cubic | N<sup>3</sup> | Three nested loops |
+| Quadratic | N<sup>2</sup> | Two nested loops |
+| Linearithmic | N log N | Commonly seen with divide and conquer approaches |
+| Linear | N | Single loops |
+| Logarithmic | log N | Binary search trees |
+| Constant | 1 | Operations such as addition and subtraction |
 
 ## Big-O Notation (Asymptotic Notation)
 Depending on the input, an algorithm can demonstrate the best, worst, and average cases.  We generally want to know the worst case running scenario to establish the minimal running time a program will spend performing an algorithm.
