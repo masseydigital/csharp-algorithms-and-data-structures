@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAlgorithms", "CSharpAlgorithms\CSharpAlgorithms.csproj", "{8594CB8E-2A90-48A1-A471-D2CE7B72DB0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAlgorithms.Test", "CSharpAlgorithms.Test\CSharpAlgorithms.Test.csproj", "{F2866253-143E-48DD-B9E0-535216EDC06E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8594CB8E-2A90-48A1-A471-D2CE7B72DB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8594CB8E-2A90-48A1-A471-D2CE7B72DB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8594CB8E-2A90-48A1-A471-D2CE7B72DB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8594CB8E-2A90-48A1-A471-D2CE7B72DB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2866253-143E-48DD-B9E0-535216EDC06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2866253-143E-48DD-B9E0-535216EDC06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2866253-143E-48DD-B9E0-535216EDC06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2866253-143E-48DD-B9E0-535216EDC06E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4031E67-5C03-4CFF-8798-82CBF6FF9B58}
+	EndGlobalSection
+EndGlobal

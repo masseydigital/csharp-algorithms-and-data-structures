@@ -51,3 +51,13 @@ Order of growth falls into the following from largest to smallest:
 ## Big-O Notation (Asymptotic Notation)
 Depending on the input, an algorithm can demonstrate the best, worst, and average cases.  We generally want to know the worst case running scenario to establish the minimal running time a program will spend performing an algorithm.
 
+## Sorting
+
+### Bubble Sort
+Most likely you will never see the use of bubble sort since it does not have great performance.  Bubble sort works by tracking 3 things the ith elemnent, the i+1th element, and the wall which denotes sorted vs. unsorted.  Each loop of the array will compare the ith and i+1th element and leave the highest number in the correct place to the right.  Bubble sort is an in-place sorting method - this means that no additional storage (except the iterator) is needed for the calculation.  Bubble sort is a _Stable_ algorithm.  Stable means it does not change the relative order of the items - a number with the same value but smaller index will always be placed before the same value with a higher index.  Bubble sort has a quadractic time complexity, O(n<sup>2</sup>).  This means that performance degrades quickly.
+
+### Selection Sort
+In selection sort, we select either the largest or smallest value in each pass.  In each pass, we search for the largest value, and store the index of it.  At the end of the pass, we swap the biggest element with the last one.  Selection-sort is an in-place aglorithm.  The algorithm is Unstable.  This algorithm runs in O(n<sup>2</sup>) time complexity.  The algorithm degrades quickly, yet slower than Bubble Sort.
+
+### Insertion Sort
+Insertion sort works similarly to how you would sort cards in your hand. All the elements to the left of the wall are considered sorted with the wall starting to the right of the first element.  We save the initial value being sorted in a new value.  
