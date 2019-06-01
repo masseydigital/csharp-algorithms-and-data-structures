@@ -102,3 +102,20 @@ Quick sort is one of the best modern sorting algorithms.  It is another divide a
 5. Split array into two sub-arrays.
 **The elements to the left of the pivot will be less that the pivot and the elements to the right will be greater than the pivot.**
 6. Replay the algorithm recursively for each new sub-array.
+
+### Lists
+Lists are similar to arrays.  They live in the System.Collections.Generic namespace.  They have a bunch of methods that can be used to alter the lists.  Count and capacity are two of these values.  Count lists the number of items in the list, while capacity is the total number of items that can currently be in the list.  This means that the size of the list is dynamic.  Resizing is an expensive operation - that is why each time the list resizes, it doubles.  Removing items from an array does _not_ remove size from the list.  TrimExcess method can be used to decrease memory size.  The sort method sorts by descending values by default.  To sort by other member properties, you can use a lambda expresssion.  List sort calls Array sort internally.  If T is primitive, calls the TrySZSort().  If T is reference type, then check .net core and framework greater than 4.5 then run IntroSort() else run DepthLimitedQuickSort() unless 32 recursion depth, then run HeapSort().  Array.sort on average demonstrate linearithmic growth except in extremely rare cases where it could be quadratic.
+
+List methods provide the following time complexities.
+
+| Type | Complexity | Notes |
+| ---- | -------- | -------------------------------------------------- |
+| Add | O(1) if enough space, O(N) if not enough | |
+| Remove | O(N) | Searching |
+| RemoveAt | O(N) | Shifting |
+| Reverse | O(N) | |
+| ToArray | O(N) | based on Array.Copy |
+| Contains, IndexOf, etc. | O(N) | Traversal of N elements |
+| Sorting | O(nlogn) | O(n<sup>2</sup>) rare worst case |
+
+### Linked Lists

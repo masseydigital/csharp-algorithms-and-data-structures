@@ -1,11 +1,12 @@
 using System;
 
-namespace Agorithms_CSharp_Course
+namespace Algorithms_CSharp_Course
 {
     static void Main(string[] args)
     {
-        ArraysDemo();
-        TestOneBasedArray();
+        //ArraysDemo();
+        //TestOneBasedArray();
+        ListDemo.Run();
     }
 
     static void ArrayTimeComplexity(object[] array)
