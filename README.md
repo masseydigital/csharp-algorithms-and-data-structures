@@ -82,3 +82,23 @@ Shell sort is based on Insertion Sort.  Insertion sort runs fast on pre-sorted a
 
 1. Calculate max gap < N/3 where N is length of array.
 2. Reduce the gap at the end of each step of the outer loop.
+
+### Merge Sort
+Merge sort belongs to the group of divide and conquer sorting solutions.  Two phases: splitting and merging.  Splitting provides an organized way to sequence the merges. Sibling arrays are split arrays with a size of 1.  *Not* an in-place algorithm, uses much memory (depending on n).  Merge sort is stable in the classic implementation.  Merge sort runs in O(nlogn) time complexity (linearithmic).
+
+Steps:
+1. Split the array (if array is odd, one will be bigger)
+2. Continue splitting until each unit only has 1 elmenet.
+3. Merge the array with the lowest value to the left and the larget to the right.
+4.  Continue merging with comparisons from both of the arrays.
+
+### Quick Sort
+Quick sort is one of the best modern sorting algorithms.  It is another divide and conquer algorithm which is recursive.  Quick sort has 2 iterators i,j and a pivot, P.  Quick-sort is an in-place agorithm.  It runs in O(nlogn) time complexity (linearithmic).  The extremely rare case is that the data is reverse sorted in which it would run in O(n<sup>2</sup>) time complexity.  It is also unstable.
+
+1. Increment J until we find an element that is less than P.
+2. Increment I and swap elements i and j.
+3. Repeat until j reaches the end of the array.
+4. Exchange element P with element i.
+5. Split array into two sub-arrays.
+**The elements to the left of the pivot will be less that the pivot and the elements to the right will be greater than the pivot.**
+6. Replay the algorithm recursively for each new sub-array.

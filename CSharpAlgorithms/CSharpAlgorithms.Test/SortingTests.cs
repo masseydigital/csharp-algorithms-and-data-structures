@@ -64,5 +64,22 @@ namespace CSharpAlgorithms.Test
             RuntTestsForSortAlgorithm(Algorithms.InsertionSort);
         }
 
+        [Test]
+        public void ShellSort_ValidInput_SortedOutput()
+        {
+            RuntTestsForSortAlgorithm(Algorithms.ShellSort);
+        }
+
+        [Test]
+        public void MergeSort_ValidInput_SortedOutput()
+        {
+            RuntTestsForSortAlgorithm(Algorithms.MergeSort);
+        }
+
+        [Test]
+        public void QuickSort_ValidInput_SortedOutput()
+        {
+            RuntTestsForSortAlgorithm(Algorithms.QuickSort);
+        }
     }
 }
