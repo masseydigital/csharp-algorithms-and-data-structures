@@ -10,4 +10,8 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CSharpAlgorithms\CSharpAlgorithms.csproj" />
+  </ItemGroup>
+
 </Project>

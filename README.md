@@ -60,4 +60,25 @@ Most likely you will never see the use of bubble sort since it does not have gre
 In selection sort, we select either the largest or smallest value in each pass.  In each pass, we search for the largest value, and store the index of it.  At the end of the pass, we swap the biggest element with the last one.  Selection-sort is an in-place aglorithm.  The algorithm is Unstable.  This algorithm runs in O(n<sup>2</sup>) time complexity.  The algorithm degrades quickly, yet slower than Bubble Sort.
 
 ### Insertion Sort
-Insertion sort works similarly to how you would sort cards in your hand. All the elements to the left of the wall are considered sorted with the wall starting to the right of the first element.  We save the initial value being sorted in a new value.  
+Insertion sort works similarly to how you would sort cards in your hand. All the elements to the left of the wall are considered sorted with the wall starting to the right of the first element.  We save the initial value being sorted in a new value.  Insertion sort is an in-place, stable algorithm.  It runs in quadratic, O(n<sup>2</sup>) time.  It degrades quickly - if the input is already sorted, the running time will be linear.
+
+#### Recursion
+A recursive function is a function that calls itself.  A recursive function has a base case terminates recursive calls chain at the simplest unit of the algorithm. i.e. factorial - multiplication of numbers counting down from n to 1.  Recursive calls are slower due to memory allocation.  The depth of recursion is bound for recursive functions wheereas the iterative version is not.
+
+Example:
+
+```csharp
+//Recursive Factorial
+private static int RecursiveFactorial(int n){
+    if(n==0)
+        return 1;
+    
+    return n * RecursiveFactorial(n-1);
+}
+```
+
+### Shell Sort
+Shell sort is based on Insertion Sort.  Insertion sort runs fast on pre-sorted arrays.  Pre-sort the input and switch to Insertion Sort.  Gap is used for pre-sorting (swapping distant elements).  It starts with a large gap and gradually reduces it.  Once gap = 1, Insertion Sort finishes the sorting process.  Shell sort depends on a concrete gap value.   It 99% of cases can use a universal sequence of gap values. The goal of the gaps is to reduce the number of swaps that Insertion Sort needs to perform.  Shell sort is an in-place algorithm.  It is unstable. The running time is dependent on gap value that is used.  i.e. worst-case O(n^<sup>3/2</sup>) if sequence is (1/2(3<sup>k</sup>)-1).  On average will be O(n<sup>6/5</sup>).
+
+1. Calculate max gap < N/3 where N is length of array.
+2. Reduce the gap at the end of each step of the outer loop.

@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using NUnit.Framework;
 using CSharpAlgorithms;
 
@@ -45,13 +49,19 @@ namespace CSharpAlgorithms.Test
         [Test]
         public void BubbleSort_ValidInput_SortedInput()
         {
-            RuntTestsForSortAlgorithm(CSharpAlgorithms.Algorithms.BubbleSort);
+            RuntTestsForSortAlgorithm(Algorithms.BubbleSort);
         }
 
         [Test]
         public void SelectionSort_ValidInput_SortedOutput()
         {
-            RuntTestsForSortAlgorithm(CSharpAlgorithms.Algorithms.SelectionSort);
+            RuntTestsForSortAlgorithm(Algorithms.SelectionSort);
+        }
+
+        [Test]
+        public void InsertionSort_ValidInput_SortedOutput()
+        {
+            RuntTestsForSortAlgorithm(Algorithms.InsertionSort);
         }
 
     }
