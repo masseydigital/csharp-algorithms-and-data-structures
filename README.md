@@ -118,4 +118,16 @@ List methods provide the following time complexities.
 | Contains, IndexOf, etc. | O(N) | Traversal of N elements |
 | Sorting | O(nlogn) | O(n<sup>2</sup>) rare worst case |
 
+### Node Chains
+A node serves two functions - 1) the function of the data container.  2) funcion of a pointer.  Connected nodes are called a node chain.
+
 ### Linked Lists
+Linked lists are abstract data types which contains a reference to the head node, tail node, and supports Add, Remove, Find, and Enumerate.
+
+#### Singly Linked List
+AddFirst - Adding a first node makes the head and tail point to the same location.  If adding a second node, shift the previous head node to the tail node and the new node to the head node.  Every time after that, shift the head node to the new node.
+AddLast - Adding a first node makes the head and tail point to the same location.  Adding a second node shift the previous node to the head node and the new node to the tail node.  Every addition after that shifts the tail node, and makes the new node the tail node.
+**Both these operations are constant**
+RemoveLast - shift all the nodes back and make the last node the tail node.
+RemoveFirst - Bring all nodes back, making the new first node the head node.
+**A drawback of linkedlists is that we cannot access intermediate nodes directly**
