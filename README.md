@@ -125,9 +125,26 @@ A node serves two functions - 1) the function of the data container.  2) funcion
 Linked lists are abstract data types which contains a reference to the head node, tail node, and supports Add, Remove, Find, and Enumerate.
 
 #### Singly Linked List
-AddFirst - Adding a first node makes the head and tail point to the same location.  If adding a second node, shift the previous head node to the tail node and the new node to the head node.  Every time after that, shift the head node to the new node.
-AddLast - Adding a first node makes the head and tail point to the same location.  Adding a second node shift the previous node to the head node and the new node to the tail node.  Every addition after that shifts the tail node, and makes the new node the tail node.
+_AddFirst_ - Adding a first node makes the head and tail point to the same location.  If adding a second node, shift the previous head node to the tail node and the new node to the head node.  Every time after that, shift the head node to the new node.
+
+_AddLast_ - Adding a first node makes the head and tail point to the same location.  Adding a second node shift the previous node to the head node and the new node to the tail node.  Every addition after that shifts the tail node, and makes the new node the tail node.
+
 **Both these operations are constant**
-RemoveLast - shift all the nodes back and make the last node the tail node.
-RemoveFirst - Bring all nodes back, making the new first node the head node.
+
+_RemoveLast_ - shift all the nodes back and make the last node the tail node.
+_RemoveFirst_ - Bring all nodes back, making the new first node the head node.
+
 **A drawback of linkedlists is that we cannot access intermediate nodes directly**
+
+#### Doubly Linked List
+A doubly linked list helps the problem of linear time complexity for removing items.  It does this by storing a reference to the previous and the next node.  The drawback of a doubly linked list is that is takes up twice as much memory since it holds both a next and previous link to a node.  Doubly linked lists can be circular by connecting the tail node to the head node.  The time complexity is the same as the single lined list, but the RemoveLast method is constant.
+
+.Net BCL provides an implementation of LinkedList.  The .Net linked list is circular interally, but has null on the ends facing the client.
+
+## Searching
+
+### Linear Search
+Linear search refers to the traditional for loop approach to searching for items in a collection.  Time complexity is O(N).
+
+### Binary Search
+Approaches the searching problem by utilizing divide and conquer.  It requires data to be sorted in order to use.  Takes the element in the middle and compares it to the search value.  If equal, we are done!  If element > value, search the left half; else, search the right half.  The time complexity of binary search is O(n log n).

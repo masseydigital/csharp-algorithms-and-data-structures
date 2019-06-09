@@ -18,5 +18,31 @@ namespace CSharpAlgorithms
             array[i] = array[j];
             array[j] = temp;
         }
+
+        public static bool Exists(int[] array, int number)
+        {
+            for(int i=0; i<array.Length; i++)
+            {
+                if(array[i] == number)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static int IndexOf(int[] array, int number)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == number)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
     }
 }
