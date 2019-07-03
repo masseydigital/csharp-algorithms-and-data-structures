@@ -153,8 +153,31 @@ Approaches the searching problem by utilizing divide and conquer.  It requires d
 
 Fast access to information is a required condition for data transfer nowadays.  _Symbol tables_ allow us to add a value using a key and then retrieve the data using the key.   We also refer to symbol tables as _dictionaries_.  Keys do not need to be integers.  Symbol tables can be devided into _ordered_ and _unordered_ variations.  
 
-They should support the following api: 1) a default constructor and a constructor which allows a client to pass a custom key comparer.  2) bool TryGet(TKey key) returns true if a value was found, otherwise false.  3) Add(TKey, key, TValue, value) inserts a key-value pair into a table.  4) bool Remove(TKey) explicitly removes a key-value pair. 5) bool Contains(TKey key) checks if a certain key is presented in a table. 5) int Count() returns the number of key-value pairs in the table, 6) IEnumerable<TKey> Keys() returns all the keys from a table.
+They should support the following api: 
+1) a default constructor and a constructor which allows a client to pass a custom key comparer.  
+2) bool TryGet(TKey key) returns true if a value was found, otherwise false.  
+3) Add(TKey, key, TValue, value) inserts a key-value pair into a table. 
+4) bool Remove(TKey) explicitly removes a key-value pair. 
+5) bool Contains(TKey key) checks if a certain key is presented in a table. 
+6) int Count() returns the number of key-value pairs in the table, 
+7) IEnumerable<TKey> Keys() returns all the keys from a table.
 
-Symbol tables that are ordered have advantages over unordered symbol tables.  The following api is more efficient when run on ordered symbol tables than unordered symbol tables: 1) TKey Min() - the least key, 2) TKey Max() - the greatest key, 3) void RemoveMin() - remove the least key, 4) void RemoveMax() - remove the greatest key, 5) TKey Floor(TKey key) - get the greatest key which is less or equals the requested key.  6) TKey Ceiling(TKey key) - get the least key which is greater or equals the requested key.  7) int Rank (TKey key) - counts the number of keys which are less than the requested key.  8) TKey Select(int k) - searches for a key with a specific rank.  9) int Range(TKey a, TKey b) - allows to quickly get the number of keys between a and b -> [a..b]
+Symbol tables that are ordered have advantages over unordered symbol tables.  The following api is more efficient when run on ordered symbol tables than unordered symbol tables: 
+1) TKey Min() - the least key, 
+2) TKey Max() - the greatest key, 
+3) void RemoveMin() - remove the least key, 
+4) void RemoveMax() - remove the greatest key, 
+5) TKey Floor(TKey key) - get the greatest key which is less or equals the requested key.  
+6) TKey Ceiling(TKey key) - get the least key which is greater or equals the requested key.  
+7) int Rank (TKey key) - counts the number of keys which are less than the requested key.  
+8) TKey Select(int k) - searches for a key with a specific rank.  
+9) int Range(TKey a, TKey b) - allows to quickly get the number of keys between a and b -> [a..b]
 
-### Sequential Search
+Sequential Search ST Time Complexity
+Searching and Inserting (Get and Add operations) - O(N)
+Searching - O(N/2)
+Doesn't support ordered operations
+
+Binary Search ST Time Complexity 
+Searching - O(log N) 
+Insertion - O(N)
