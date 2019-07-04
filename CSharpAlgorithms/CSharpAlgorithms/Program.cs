@@ -10,15 +10,6 @@ namespace CSharpAlgorithms
     {
         static void Main(string[] args)
         {
-            //Node first = new Node() { Value = 5 };
-            //Node second = new Node() { Value = 1 };
-
-            //first.Next = second;
-
-            //Node third = new Node() { Value = 3 };
-            //second.Next = third;
-
-            //PrintOutLinkedList(first);
 
             Console.ReadKey();
         }

@@ -181,3 +181,41 @@ Doesn't support ordered operations
 Binary Search ST Time Complexity 
 Searching - O(log N) 
 Insertion - O(N)
+
+## Hash Tables
+_Hash Functions_ allow to map data of arbitrary size to a fixed size.  In the context of hash tables, we apply hash functions to map keys to indexes at which we insert corresponding data.  Hash functions guaranteed to generate the same output for the same input.  In cryptography, they only map one way, i.e. SHA encryption.
+
+"abcdef"  ----------->   1
+
+| Key | Hash | Value |
+| ---- | -------- | -------------------------------------------------- |
+| a | 1 | quick |
+| b | 3 | brown |
+| c | 0 | fox |
+| d | 2 | jumps |
+| e | 3 | lazy |    **generates a collision for hash, there is already a 3**
+
+Need to solve major problems for hash tables:
+1) Find a hashing algorithm which generates different indexes for different keys in such a way that collisions rarely occur
+2) Find an algorithm of resolving collisions which will occur anyway
+
+Hash functions significantly depend on the type of key used.  Hashes can be integers, strings, floats, custom value types/structure, custom reference types/classes.  All the types inherit from the object type.  Custom types are based on primitives with override GetHashCode.
+
+Best practices for hash codes:
+1) hash codes should never be used outside of the application domain in which they were created
+2) string hashes should never be used as key fields in a collection; hash codes are not guaranteed to be stable across applications, versions, app domains.
+3) hash codes should never be persisted
+4) hash codes should be fast
+5) Well distributed across the space of 32-bit integers for the given distribution of inputs
+6) Do not use hash codes as a unique key for an object; probabily of collision is extremely high
+7) Do not use hash codes for a digital signature or password equivalent
+
+Best practices for GetHashCode:
+1) GetHashCode is useful for only one thing: putting an object in a hash table
+2) Equal items should have equal hashes
+3) The integer returned by GetHashCode must never change while the object is contained in a data structure that depends on the hash code remaining stable (immutable)
+4) GetHashCode must never throw an exception and must return
+
+_Collisions_ occur when two keys try to map to the same index.  There are two approaches for resolving collisions (each approach can have different implementations):
+1) Separate Chaining: creating a linked list at the index of collision and looping through it for the value
+2) Open addressing: finding an open index to place a collision
